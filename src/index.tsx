@@ -9,6 +9,9 @@ import { Menu } from "./pages/Menu/Menu";
 import { InfoModify } from "./pages/InfoModify/InfoModify";
 import { ModifyMenu } from "./pages/ModifyMenu/ModifyMenu";
 import { PasswordModify } from "./pages/PasswordModify/PasswordModify";
+import { BookingManage } from "./pages/BookingManage/BookingManage";
+import { MeetingRoomManage } from "./pages/MeetingRoomManage/MeetingRoomManage";
+import { Statistics } from "./pages/Statistics/Statistics";
 
 const routes = [
   {
@@ -21,8 +24,24 @@ const routes = [
         element: <Menu></Menu>,
         children: [
           {
+            path: "/",
+            element: <MeetingRoomManage />,
+          },
+          {
             path: "user_manage",
             element: <UserManage />,
+          },
+          {
+            path: "meeting_room_manage",
+            element: <MeetingRoomManage />,
+          },
+          {
+            path: "booking_manage",
+            element: <BookingManage />,
+          },
+          {
+            path: "statistics",
+            element: <Statistics />,
           },
         ],
       },
